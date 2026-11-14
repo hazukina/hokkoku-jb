@@ -1400,8 +1400,10 @@ ul, ol { list-style: none; }
   .stat-unit { font-size: 1rem; }
   .stat-label { font-size: 0.62rem; }
 
-  /* 製品カード画像はモバイルで非表示（テキストと被るため） */
-  .jf-product-spec-img { display: none; }
+  /* 製品カード画像：モバイルでは小さくして右下に配置 */
+  .jf-product-spec { padding-bottom: 88px; }
+  .jf-product-spec-img { display: block; width: 72px; bottom: 14px; right: 14px; }
+  .jf-spec-list { padding-right: 80px; }
 
   /* ヒーローFAXテキスト縮小 */
   .hero-tel-info { font-size: 0.72rem; }
