@@ -1359,6 +1359,7 @@ ul, ol { list-style: none; }
    ============================================= */
 @media (max-width: 767px) {
   :root { --header-h: 62px; }
+  html { font-size: 14px; }
 
   .hamburger { display: flex; }
   .header-contact .header-contact-label { display: none; }
