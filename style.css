@@ -31,6 +31,7 @@ body {
   color: var(--text);
   background: var(--white);
   line-height: 1.75;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
@@ -1359,7 +1360,6 @@ ul, ol { list-style: none; }
    ============================================= */
 @media (max-width: 767px) {
   :root { --header-h: 62px; }
-  html { font-size: 14px; }
 
   .hamburger { display: flex; }
   .header-contact .header-contact-label { display: none; }
@@ -1374,12 +1374,8 @@ ul, ol { list-style: none; }
   .btn-primary { font-size: 0.92rem; padding: 12px 22px; }
   .btn-ghost   { font-size: 0.88rem; padding: 11px 18px; }
 
-  .section { padding: 56px 0; }
-  .section-header { margin-bottom: 32px; }
-  .section-title { font-size: 1.55rem; }
-  .section-desc  { font-size: 0.88rem; }
-  .card-title    { font-size: 0.95rem; }
-  .card-text     { font-size: 0.82rem; }
+  .section { padding: 72px 0; }
+  .section-header { margin-bottom: 40px; }
 
   .cards, .cards-4 { grid-template-columns: 1fr; }
   .card { padding: 28px 22px; }
