@@ -25,7 +25,7 @@
 
 /* ---- リセット ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 17px; background: #0f2040; }
+html { scroll-behavior: smooth; font-size: 17px; }
 body {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--text);
@@ -791,6 +791,7 @@ ul, ol { list-style: none; }
   font-size: 0.85rem; color: var(--muted); line-height: 1.8;
   margin-bottom: 16px;
 }
+.jf-spec-row { display: contents; }
 .jf-spec-list { display: flex; flex-direction: column; gap: 6px; }
 .jf-spec-list li {
   font-size: 0.82rem; color: var(--navy); font-weight: 500;
@@ -1366,6 +1367,9 @@ ul, ol { list-style: none; }
    レスポンシブ — スマホ（〜767px）
    ============================================= */
 @media (max-width: 767px) {
+  html { overflow-x: hidden; }
+  body { width: 100vw; }
+
   :root { --header-h: 62px; }
 
   .hamburger { display: flex; }
@@ -1422,10 +1426,11 @@ ul, ol { list-style: none; }
   .stat-unit { font-size: 1rem; }
   .stat-label { font-size: 0.62rem; }
 
-  /* 製品カード画像：モバイルでは小さくして右上に配置 */
-  .jf-product-spec { padding-bottom: 28px; padding-right: 90px; }
-  .jf-product-spec-img { display: block; width: 72px; top: 20px; bottom: auto; right: 14px; }
-  .jf-spec-list { padding-right: 0; }
+  /* 製品カード画像：チェックリストの横に並べる */
+  .jf-product-spec { padding-bottom: 28px; padding-right: 26px; }
+  .jf-spec-row { display: flex; align-items: flex-start; gap: 12px; }
+  .jf-spec-list { flex: 1; padding-right: 0; }
+  .jf-product-spec-img { position: static; width: 72px; top: auto; right: auto; bottom: auto; }
 
   /* CTAボタンをモバイルで枠内に収める */
   .jf-cta { padding: 20px; }
