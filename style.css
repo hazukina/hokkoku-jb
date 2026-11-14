@@ -1368,14 +1368,18 @@ ul, ol { list-style: none; }
 
   .hero { min-height: 80vh; }
   .hero-illustration { display: none; }
-  .hero-content { padding: 56px 0 120px; }
+  .hero-content { padding: 56px 0 60px; }
   .hero-title { font-size: 1.75rem; }
   .hero-desc { font-size: 0.92rem; }
   .btn-primary { font-size: 0.92rem; padding: 12px 22px; }
   .btn-ghost   { font-size: 0.88rem; padding: 11px 18px; }
 
-  .section { padding: 72px 0; }
-  .section-header { margin-bottom: 40px; }
+  .section { padding: 56px 0; }
+  .section-header { margin-bottom: 32px; }
+  .section-title { font-size: 1.55rem; }
+  .section-desc  { font-size: 0.88rem; }
+  .card-title    { font-size: 0.95rem; }
+  .card-text     { font-size: 0.82rem; }
 
   .cards, .cards-4 { grid-template-columns: 1fr; }
   .card { padding: 28px 22px; }
@@ -1417,6 +1421,14 @@ ul, ol { list-style: none; }
   .jf-product-spec { padding-bottom: 88px; }
   .jf-product-spec-img { display: block; width: 72px; bottom: 14px; right: 14px; }
   .jf-spec-list { padding-right: 80px; }
+
+  /* CTAボタンをモバイルで枠内に収める */
+  .jf-cta { padding: 20px; }
+  .jf-cta .btn-primary { width: 100%; justify-content: center; font-size: 0.85rem; }
+
+  /* セーフティバッジ：均等幅・中央揃え */
+  .jf-safety-wrap { flex-direction: column; }
+  .safety-badge { width: 100%; justify-content: center; }
 
   /* ヒーローFAXテキスト縮小 */
   .hero-tel-info { font-size: 0.72rem; }
