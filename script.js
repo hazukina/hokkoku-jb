@@ -328,9 +328,11 @@ if (safetyWrap) {
    ============================================= */
 const storyToggleBtn = document.getElementById('storyToggleBtn');
 const storyExpand    = document.querySelector('.jf-story-expand');
+const storyCut       = document.querySelector('.jf-story-cut');
 if (storyToggleBtn && storyExpand) {
   storyToggleBtn.addEventListener('click', () => {
     const isOpen = storyExpand.classList.toggle('open');
+    if (storyCut) storyCut.classList.toggle('open', isOpen);
     storyToggleBtn.textContent = isOpen ? '閉じる' : '続きを読む';
     storyToggleBtn.setAttribute('aria-expanded', String(isOpen));
   });
