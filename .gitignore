@@ -1,0 +1,18 @@
+# ローカル設定（個人の連絡先情報）
+config.local.js
+
+# Claude作業ファイル
+CLAUDE.md
+
+# 参考資料（チラシ等）
+_reference/
+
+# バックアップファイル
+*_backup.*
+index_backup.html
+style_backup.css
+
+# スクリーンショット・スクリプト
+screenshot.png
+screenshot-script.mjs
+*.screenshot.*
