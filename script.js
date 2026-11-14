@@ -322,3 +322,16 @@ if (safetyWrap) {
     heroBg.appendChild(p);
   }
 })();
+
+/* =============================================
+   代表者メッセージ「続きを読む」（モバイルのみ表示）
+   ============================================= */
+const storyToggleBtn = document.getElementById('storyToggleBtn');
+const storyExpand    = document.querySelector('.jf-story-expand');
+if (storyToggleBtn && storyExpand) {
+  storyToggleBtn.addEventListener('click', () => {
+    const isOpen = storyExpand.classList.toggle('open');
+    storyToggleBtn.textContent = isOpen ? '閉じる' : '続きを読む';
+    storyToggleBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+}
