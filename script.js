@@ -40,6 +40,35 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =============================================
+   スクロールスパイ（ナビのアクティブ状態）
+   ============================================= */
+const spySections = Array.from(document.querySelectorAll('main section[id]'));
+const spyLinks    = document.querySelectorAll('.desktop-nav a[href^="#"]');
+
+function updateNav() {
+  const y = window.scrollY + 120;
+  spySections.forEach(sec => {
+    const link = document.querySelector(`.desktop-nav a[href="#${sec.id}"]`);
+    if (!link) return;
+    link.classList.toggle('active', y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight);
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+
+/* =============================================
+   ページトップへ戻るボタン
+   ============================================= */
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* =============================================
    採用情報アコーディオン
    ============================================= */
 const recruitToggle = document.getElementById('recruitToggle');
